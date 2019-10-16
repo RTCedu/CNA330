@@ -9,7 +9,7 @@ import os
 import time
 
 # Connect to database
-# You should not need to edit anything in this function
+# You may need to edit the connect function based on your local settings.
 def connect_to_sql():
     conn = mysql.connector.connect(user='root', password='',
                                   host='127.0.0.1',
