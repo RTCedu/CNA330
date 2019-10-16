@@ -48,7 +48,7 @@ def delete_job(cursor, jobdetails):
 # Grab new jobs from a website
 def fetch_new_jobs(arg_dict):
     # Code from https://github.com/RTCedu/CNA336/blob/master/Spring2018/Sql.py
-    query = "https://jobs.github.com/positions.json?" + "location=seattle" # Add arguments here
+    query = "https://jobs.github.com/positions.json?" + "location=seattle" ## Add arguments here
     jsonpage = 0
     try:
         contents = urllib.request.urlopen(query)
