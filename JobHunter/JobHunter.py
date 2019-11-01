@@ -78,7 +78,7 @@ def load_config_file(filename):
     return argument_dictionary
 
 # Main area of the code.
-def jobhunt(arg_dict):
+def jobhunt(cursor, arg_dict):
     # Fetch jobs from website
     jobpage = fetch_new_jobs(arg_dict)
     # print (jobpage)
@@ -100,7 +100,7 @@ def main():
     # Load text file and store arguments into dictionary
     arg_dict = load_config_file(sys.argv[1])
     while(1):
-        jobhunt(arg_dict)
+        jobhunt(cursor, arg_dict)
         time.sleep(3600) # Sleep for 1h
 
 if __name__ == '__main__':
