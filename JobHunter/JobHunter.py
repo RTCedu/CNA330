@@ -101,6 +101,7 @@ def main():
     arg_dict = load_config_file(sys.argv[1])
     while(1):
         jobhunt(cursor, arg_dict)
+        conn.commit()
         time.sleep(3600) # Sleep for 1h
 
 if __name__ == '__main__':
